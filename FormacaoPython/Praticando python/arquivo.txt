@@ -1,0 +1,2 @@
+conteudo do arquivo, 
+Adicionando mais conteudo a um arquivo existente
