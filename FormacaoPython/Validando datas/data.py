@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 class DatasBr():
@@ -25,9 +25,25 @@ class DatasBr():
         semana = self.momento_cadastro.weekday()
         return lst_semana[semana].upper()
     
+    def format_data(self):
+        data_formatada = self.momento_cadastro.strftime("%d/%m/%y %H:%M")
+        return data_formatada
+    
+    def data_cadastro(self):
+        data_cadastro = (datetime.today() + timedelta(days=30, minutes=55, seconds=10)) - self.momento_cadastro
+        return data_cadastro
+
+    def tempo_de_cadastro(self):
+        tempo_cadastro = (datetime.today() + timedelta(days=30)) - self.momento_cadastro
+        return tempo_cadastro
+
+
     def __str__(self) -> str:
-        return f'{self.mes_cadastro} {self.semana}'
+        return self.format_data()
+    
 
 data = DatasBr()
 
-print(data)
+print(data.mes_cadastro())
+
+print(data.semana())
