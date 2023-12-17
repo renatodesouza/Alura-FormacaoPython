@@ -7,7 +7,7 @@ data_atual = datetime.today()
 
 print(data_atual)
 
-#Exibe o mês atual, obs: o mês e represnetado por numero
+#Exibe o mês atual, obs: o mês e representado por numero
 mes_atual = data_atual.month
 
 print(mes_atual)
